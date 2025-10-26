@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(209, 97%, 88%); 
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    background: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #2b8cff;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.639);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: hsl(218, 87%, 58%);
+    box-shadow: 0 0 5px rgba(76, 104, 175, 0.3);
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(to right, #1e5b98, #85c1ff);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #3084d8, #9dcdfd);
+}
+
+button:active {
+    opacity: 0.9;
+}
+
+/* Additional styles for dynamic sections */
+.section-container {
+    margin-top: 20px;
+}
+
+.dynamic-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    margin-top: 5px;
+}
+
+.add-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background 0.3s;
+    width: auto;
+}
+
+.add-btn:hover {
+    background: #218838;
+}
+
+.remove-btn {
+    margin-top: 3px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+}
+
+.remove-btn:hover {
+    background: #c82333;
+}
+
+.section-title {
+    color: #1e5b98;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+
+
+.theme-selection {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #1e5b98;
+}
+
+.theme-title {
+    text-align: center;
+    color: #1e5b98;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.themes-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.theme-option {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.theme-option:hover {
+    transform: translateY(-5px);
+}
+
+.theme-preview {
+    width: 150px;
+    height: 200px;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.theme-preview.active {
+    border-color: #1e5b98;
+    box-shadow: 0 0 15px rgba(55, 135, 215, 0.5);
+}
+
+.theme-label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .form-container {
+        margin: 20px;
+        padding: 15px 20px;
+    }
+    
+    .remove-btn {
+        position: static;
+        margin-top: 10px;
+        width: auto;
+        display: inline-block;
+    }
+}
